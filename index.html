@@ -1,61 +1,36 @@
 <!DOCTYPE html>
-
-<html lang = "en">
-    <head>
-<meta charset="utf-8">
-<meta name="view-port" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="styles.css">
-<script>index.js</script>
-<title>Calculator the app</title>
-    </head>
-         
-    
-                
-  
-<body>
-    <div class="container">
-        <div class="calculator">
-            <form>
-                <div >
-                    <input id = "display" type="text" name="display" value="">
-                </div>
-                       <div data-previous-operand class="first_op"></div>
-                       <div  data-current-operand class="second_op"></div>
-    
-                      <div>
-                    <div></div>
-                        <input data-delete id = "delete" type="button" onclick="display.value = ' ' "value="C">  
-                    </div>
-                    <div>
-                    <input class="data-num" id=""type="button" value="7" onclick="display.value += '7' ">
-                    <input  class="data-num" type="button" onclick="display.value += '8' "value="8">
-                    <input  class="data-num" type="button" onclick="display.value += '9' " value="9">
-                    <input data -operation id="bl"type="button" onclick="display.value += '*' " value="*">
-                   
-                </div>
-                <div>
-                    <input  class="data-num" type="button" onclick="display.value += '4' " value="4">
-                    <input  class="data-num" type="button" onclick="display.value += '5' " value="5">
-                    <input  class="data-num" type="button" onclick="display.value += '6' " value="6">
-                    <input data-operation type="button" onclick="display.value += '/' " value="/">
-                </div>
-                <div>
-                    <input  class="data-num" type="button" onclick="display.value += '1' " value="1">
-                    <input  class="data-num" type="button" onclick="display.value += '2' " value="2">
-                    <input class="data-num" type="button" onclick="display.value += '3' " value="3">
-                    <input data-operation type="button" onclick="display.value += '-' " value="-">
-                </div>
-                <div>
-                    <input class="data-num" type="button" onclick="display.value += '0' "value="0">
-                    <input data-operation type="button" onclick="display.value += '.' " value=".">
-                    <input class="data-equals" type="button" onclick=""value="=">
-                    <input type="button" onclick="display.value += '+' " value="+">
-                </div>
-            </div>
-            
-            
-        </form>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="calculator">
+      <div class="display" id="display">0</div>
+      <button class="btnopc" onclick="clearDisplay()">C</button>
+      <div class="buttons">
+        <button class="btn" onclick="appendToDisplay('7')">7</button>
+        <button class="btn" onclick="appendToDisplay('8')">8</button>
+        <button class="btn" onclick="appendToDisplay('9')">9</button>
+        <button class="btnop" onclick="appendToDisplay('/')">/</button>
+        <button class="btn" onclick="appendToDisplay('4')">4</button>
+        <button class="btn" onclick="appendToDisplay('5')">5</button>
+        <button class="btn" onclick="appendToDisplay('6')">6</button>
+        <button class="btnop" onclick="appendToDisplay('*')">*</button>
+        <button class="btn" onclick="appendToDisplay('1')">1</button>
+        <button class="btn" onclick="appendToDisplay('2')">2</button>
+        <button class="btn" onclick="appendToDisplay('3')">3</button>
+        <button class="btnop" onclick="appendToDisplay('-')">-</button>
+        <button class="btn" onclick="appendToDisplay('0')">0</button>
+        <button class="btn" onclick="appendToDisplay('.')">.</button>
+        <button class="btn equals" onclick="calculateResult()">=</button>
+        <button class="btnop" onclick="appendToDisplay('+')">+</button>
+      </div>
     </div>
+    <script src="index.js"></script>
+  </body>
 </div>
     </body>
     
